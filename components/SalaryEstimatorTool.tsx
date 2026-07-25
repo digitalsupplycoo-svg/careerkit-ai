@@ -21,10 +21,8 @@ export default function SalaryEstimatorTool() {
 
   return (
     <div className="tool-panel">
-      <div style={{ marginBottom: 16 }}>
-        <label htmlFor="base" style={{ display: "block", marginBottom: 6, fontWeight: 600 }}>
-          Typical posted salary for this role in your area
-        </label>
+      <div className="field">
+        <label htmlFor="base">Typical posted salary for this role in your area</label>
         <input
           id="base"
           type="number"
@@ -35,10 +33,8 @@ export default function SalaryEstimatorTool() {
         />
       </div>
 
-      <div style={{ marginBottom: 16 }}>
-        <label htmlFor="years" style={{ display: "block", marginBottom: 6, fontWeight: 600 }}>
-          Years of relevant experience
-        </label>
+      <div className="field">
+        <label htmlFor="years">Years of relevant experience</label>
         <input
           id="years"
           type="number"
@@ -49,10 +45,8 @@ export default function SalaryEstimatorTool() {
         />
       </div>
 
-      <div style={{ marginBottom: 16 }}>
-        <label htmlFor="skills" style={{ display: "block", marginBottom: 6, fontWeight: 600 }}>
-          Number of in-demand skills for this role you have (0–5)
-        </label>
+      <div className="field">
+        <label htmlFor="skills">Number of in-demand skills for this role you have (0–5)</label>
         <input
           id="skills"
           type="number"
@@ -63,12 +57,12 @@ export default function SalaryEstimatorTool() {
         />
       </div>
 
-      <h2 style={{ fontSize: "1.05rem" }}>Suggested negotiation range</h2>
-      <p style={{ fontSize: "1.3rem", fontWeight: 700 }}>
+      <h2 className="tool-subheading">Suggested negotiation range</h2>
+      <p className="tool-result-figure">
         ${low.toLocaleString()} – ${high.toLocaleString()}
       </p>
       <p>Anchor point: ${target.toLocaleString()}</p>
-      <p style={{ fontSize: "0.85rem", color: "var(--color-muted)" }}>
+      <p className="meta-text">
         This is an educational estimate based on the numbers you entered, not a verified market-data lookup. See
         the explanation below before using it in a negotiation.
       </p>

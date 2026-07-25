@@ -53,10 +53,8 @@ export default function ResumeChecklistTool() {
 
   return (
     <div className="tool-panel">
-      <div style={{ marginBottom: 16 }}>
-        <label htmlFor="level" style={{ display: "block", marginBottom: 6, fontWeight: 600 }}>
-          Experience level
-        </label>
+      <div className="field">
+        <label htmlFor="level">Experience level</label>
         <select
           id="level"
           value={level}
@@ -69,7 +67,7 @@ export default function ResumeChecklistTool() {
         </select>
       </div>
 
-      <div style={{ marginBottom: 16 }}>
+      <div className="field">
         <label>
           <input
             type="checkbox"
@@ -80,7 +78,7 @@ export default function ResumeChecklistTool() {
         </label>
       </div>
 
-      <h2 style={{ fontSize: "1.05rem" }}>Your checklist</h2>
+      <h2 className="tool-subheading">Your checklist</h2>
       <ul>
         {items.map((item) => (
           <li key={item}>{item}</li>

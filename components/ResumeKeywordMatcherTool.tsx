@@ -63,29 +63,27 @@ export default function ResumeKeywordMatcherTool() {
         not a verdict on your resume.
       </div>
 
-      <label htmlFor="jd-input" style={{ display: "block", fontWeight: 600, marginBottom: 6 }}>
-        Job description
-      </label>
-      <textarea
-        id="jd-input"
-        rows={8}
-        style={{ width: "100%", marginBottom: 16 }}
-        placeholder="Paste the job description text here"
-        value={jobDescription}
-        onChange={(e) => setJobDescription(e.target.value)}
-      />
+      <div className="field">
+        <label htmlFor="jd-input">Job description</label>
+        <textarea
+          id="jd-input"
+          rows={8}
+          placeholder="Paste the job description text here"
+          value={jobDescription}
+          onChange={(e) => setJobDescription(e.target.value)}
+        />
+      </div>
 
-      <label htmlFor="resume-input" style={{ display: "block", fontWeight: 600, marginBottom: 6 }}>
-        Your resume text
-      </label>
-      <textarea
-        id="resume-input"
-        rows={8}
-        style={{ width: "100%", marginBottom: 16 }}
-        placeholder="Paste your resume text here"
-        value={resume}
-        onChange={(e) => setResume(e.target.value)}
-      />
+      <div className="field">
+        <label htmlFor="resume-input">Your resume text</label>
+        <textarea
+          id="resume-input"
+          rows={8}
+          placeholder="Paste your resume text here"
+          value={resume}
+          onChange={(e) => setResume(e.target.value)}
+        />
+      </div>
 
       {result && (
         <div>
@@ -96,7 +94,7 @@ export default function ResumeKeywordMatcherTool() {
 
           {result.missing.length > 0 && (
             <>
-              <h3 style={{ fontSize: "1rem" }}>Frequent job description terms not found in your resume</h3>
+              <h3 className="tool-subheading">Frequent job description terms not found in your resume</h3>
               <p>
                 Not every term needs to appear verbatim — some may already be covered by a synonym or a more
                 specific phrase in your resume. Use this as a list to sanity-check, not a checklist to
@@ -112,7 +110,7 @@ export default function ResumeKeywordMatcherTool() {
 
           {result.matched.length > 0 && (
             <>
-              <h3 style={{ fontSize: "1rem" }}>Terms already covered</h3>
+              <h3 className="tool-subheading">Terms already covered</h3>
               <ul>
                 {result.matched.map((term) => (
                   <li key={term}>{term}</li>

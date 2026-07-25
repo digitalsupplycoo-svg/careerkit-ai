@@ -60,7 +60,7 @@ export default function JobTrackerTool() {
 
   return (
     <div className="tool-panel">
-      <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: 16 }}>
+      <div className="field-row">
         <input
           aria-label="Company"
           placeholder="Company"
@@ -81,13 +81,13 @@ export default function JobTrackerTool() {
       {entries.length === 0 ? (
         <p>No applications tracked yet. Add one above — it&apos;s saved only in this browser.</p>
       ) : (
-        <table style={{ width: "100%", borderCollapse: "collapse" }}>
+        <table className="tool-table">
           <thead>
             <tr>
-              <th style={{ textAlign: "left" }}>Company</th>
-              <th style={{ textAlign: "left" }}>Role</th>
-              <th style={{ textAlign: "left" }}>Applied</th>
-              <th style={{ textAlign: "left" }}>Status</th>
+              <th>Company</th>
+              <th>Role</th>
+              <th>Applied</th>
+              <th>Status</th>
               <th />
             </tr>
           </thead>
