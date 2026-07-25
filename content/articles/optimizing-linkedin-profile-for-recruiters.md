@@ -3,8 +3,9 @@ title: "Optimizing Your LinkedIn Profile for Recruiters"
 description: "Which sections recruiters actually read, what LinkedIn's search really indexes, and how to write a headline that isn't just your job title."
 category: "LinkedIn"
 updated: "2026-03-05"
+related: ["networking-for-introverts", "working-with-recruiters-what-to-expect"]
+relatedTool: "resume-keyword-matcher"
 ---
-
 Recruiters mostly find candidates through LinkedIn's internal search (Recruiter or the free search bar), not by browsing profiles at random. That changes what's worth optimizing: search matching and the first screen a recruiter sees after a match, not the whole page.
 
 ## What LinkedIn search actually matches on

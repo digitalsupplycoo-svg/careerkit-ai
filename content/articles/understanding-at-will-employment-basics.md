@@ -3,8 +3,9 @@ title: "Understanding At-Will Employment and Your Rights"
 description: "What at-will employment means in practice, its exceptions, and where to find authoritative, jurisdiction-specific information — this is general education, not legal advice."
 category: "Workplace"
 updated: "2026-04-08"
+related: ["evaluating-a-job-offer-beyond-salary", "interview-red-flags-to-watch-for"]
+relatedTool: "salary-estimator"
 ---
-
 At-will employment is a common employment arrangement in the United States, and understanding the basic concept helps you know what's actually protected and what isn't when a workplace situation feels unfair. This is general, educational information, not legal advice — employment law varies by jurisdiction and by the specific facts of a situation, and a licensed employment attorney in your area is the right source for advice about your specific circumstances.
 
 ## What at-will means, in plain terms

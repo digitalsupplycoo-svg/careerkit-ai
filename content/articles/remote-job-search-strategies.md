@@ -3,8 +3,9 @@ title: "Remote Job Search: Where to Look and How to Stand Out"
 description: "Why generic job boards perform worse for remote roles, how to filter out fake remote listings, and what makes a remote application stronger."
 category: "Job Search"
 updated: "2026-01-30"
+related: ["working-with-recruiters-what-to-expect", "optimizing-linkedin-profile-for-recruiters"]
+relatedTool: "resume-keyword-matcher"
 ---
-
 Remote roles get disproportionately more applicants than office-based ones, because geography stops limiting who can apply. That means the search strategy and the application itself both need to work harder than they would for a local role.
 
 ## Where remote listings actually concentrate

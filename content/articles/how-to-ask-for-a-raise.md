@@ -3,8 +3,9 @@ title: "How to Ask for a Raise Without Threatening to Quit"
 description: "How to build a case for a raise using evidence instead of ultimatums, when to time the conversation, and what to do if the answer is no."
 category: "Salary & Offers"
 updated: "2026-04-15"
+related: ["negotiating-salary-after-a-job-offer", "evaluating-a-job-offer-beyond-salary"]
+relatedTool: "salary-estimator"
 ---
-
 Asking for a raise without an outside offer in hand can feel like it has less leverage than a counteroffer negotiation, but most raises granted inside a company happen exactly this way — through a clear, evidence-based case, not an ultimatum. Threatening to quit unless you get a raise is a real risk: it can work once, but it changes the relationship afterward and only works if you're genuinely prepared to follow through.
 
 ## Build the case before the conversation

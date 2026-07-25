@@ -3,8 +3,9 @@ title: "How to Evaluate a Job Offer Beyond the Salary Number"
 description: "A practical checklist for comparing offers on benefits, equity, growth, and day-to-day fit, not just the headline salary figure."
 category: "Salary & Offers"
 updated: "2026-06-25"
+related: ["negotiating-salary-after-a-job-offer", "how-to-ask-for-a-raise"]
+relatedTool: "salary-estimator"
 ---
-
 The salary figure is the easiest part of an offer to compare, which is exactly why it's tempting to let it dominate the decision even when other factors matter just as much, or more, over the life of the job.
 
 ## Total compensation, not just base salary

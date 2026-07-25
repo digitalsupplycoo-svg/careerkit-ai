@@ -10,6 +10,10 @@ export interface ArticleMeta {
   category: string;
   readingTime: string;
   updated: string;
+  /** Slugs of 2+ related articles, for internal linking. */
+  related: string[];
+  /** Slug of the most relevant tool, for internal linking. */
+  relatedTool: string;
 }
 
 export interface Article extends ArticleMeta {
@@ -42,6 +46,8 @@ export function getArticleBySlug(slug: string): Article | null {
     description: data.description,
     category: data.category,
     updated: data.updated,
+    related: Array.isArray(data.related) ? data.related : [],
+    relatedTool: data.relatedTool ?? "",
     readingTime,
     wordCount,
     html: marked.parse(content) as string
@@ -52,13 +58,15 @@ export function getAllArticles(): ArticleMeta[] {
   return getArticleSlugs()
     .map((slug) => getArticleBySlug(slug))
     .filter((a): a is Article => a !== null)
-    .map(({ slug, title, description, category, readingTime, updated }) => ({
+    .map(({ slug, title, description, category, readingTime, updated, related, relatedTool }) => ({
       slug,
       title,
       description,
       category,
       readingTime,
-      updated
+      updated,
+      related,
+      relatedTool
     }))
     .sort((a, b) => a.title.localeCompare(b.title));
 }

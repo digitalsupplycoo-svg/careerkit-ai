@@ -1,16 +1,44 @@
-import type { Metadata } from "next";
 import ResumeKeywordMatcherTool from "@/components/ResumeKeywordMatcherTool";
 import AdSlot from "@/components/AdSlot";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import Faq from "@/components/Faq";
+import JsonLd from "@/components/JsonLd";
+import { softwareApplicationSchema } from "@/lib/schema";
+import { buildMetadata } from "@/lib/pageMetadata";
+import { getTool } from "@/lib/tools";
 
-export const metadata: Metadata = {
+const TOOL = getTool("resume-keyword-matcher");
+
+export const metadata = buildMetadata({
+  path: TOOL.path,
   title: "Resume Keyword Matcher",
   description:
     "Compare your resume text against a job description's most frequent terms, entirely in your browser."
-};
+});
+
+const FAQS = [
+  {
+    question: "Does this tool understand meaning, or just match exact words?",
+    answer:
+      "Just word-frequency counting, not natural-language understanding. It won't recognize that \"managed a team\" and \"led a team\" mean roughly the same thing — a missing exact term isn't automatically a real gap."
+  },
+  {
+    question: "Is my resume or the job description stored anywhere?",
+    answer:
+      "No. The text you paste stays in your browser's memory for the session only. Closing or refreshing the tab clears it completely."
+  },
+  {
+    question: "Should I add every missing term it finds to my resume?",
+    answer:
+      "No — treat the list as questions to ask yourself, not a checklist to mechanically insert. Only add a term if it genuinely reflects your experience."
+  }
+];
 
 export default function ResumeKeywordMatcherPage() {
   return (
     <div className="page-container">
+      <JsonLd data={softwareApplicationSchema(TOOL)} />
+      <Breadcrumbs items={[{ name: TOOL.name }]} />
       <h1>Resume Keyword Matcher</h1>
       <p>
         Paste a job description and your resume text to see which frequently used terms from the posting also
@@ -20,7 +48,7 @@ export default function ResumeKeywordMatcherPage() {
 
       <ResumeKeywordMatcherTool />
 
-      <div className="article-content" style={{ marginTop: 40, padding: 0 }}>
+      <div className="article-content tool-content" style={{ marginTop: "var(--space-5)" }}>
         <h2>What this tool actually does</h2>
         <p>
           It counts how often each meaningful word appears in the job description, takes the 30 most frequent
@@ -63,8 +91,12 @@ export default function ResumeKeywordMatcherPage() {
         </p>
       </div>
 
-      <div className="article-content" style={{ padding: 0 }}>
+      <div className="article-content tool-content">
         <AdSlot id="keyword-matcher-below-content" />
+      </div>
+
+      <div className="article-content tool-content">
+        <Faq items={FAQS} />
       </div>
     </div>
   );

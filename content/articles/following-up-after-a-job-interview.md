@@ -3,8 +3,9 @@ title: "Following Up After a Job Interview"
 description: "What to send after an interview, when to send it, and how long to wait before a second follow-up."
 category: "Interviews"
 updated: "2026-01-22"
+related: ["answering-tell-me-about-yourself", "preparing-for-a-panel-interview"]
+relatedTool: "resume-checklist-generator"
 ---
-
 A thank-you note after an interview rarely gets you hired on its own, but skipping it — or sending a generic one
 — is a small, avoidable miss in an otherwise close decision. It's also a genuine chance to add something you
 didn't get to say in the room.

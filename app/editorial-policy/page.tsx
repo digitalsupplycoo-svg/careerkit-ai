@@ -1,14 +1,17 @@
-import type { Metadata } from "next";
 import { CONTACT_EMAIL } from "@/lib/env";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { buildMetadata } from "@/lib/pageMetadata";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
+  path: "/editorial-policy",
   title: "Editorial Policy",
   description: "How CareerKit AI researches, writes, reviews, and updates its guides."
-};
+});
 
 export default function EditorialPolicyPage() {
   return (
     <div className="page-container article-content">
+      <Breadcrumbs items={[{ name: "Editorial Policy" }]} />
       <h1>Editorial Policy</h1>
 
       <h2>Original content</h2>

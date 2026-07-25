@@ -1,14 +1,17 @@
-import type { Metadata } from "next";
 import { CONTACT_EMAIL } from "@/lib/env";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { buildMetadata } from "@/lib/pageMetadata";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
+  path: "/contact",
   title: "Contact",
   description: "How to reach the CareerKit AI editorial team."
-};
+});
 
 export default function ContactPage() {
   return (
     <div className="page-container article-content">
+      <Breadcrumbs items={[{ name: "Contact" }]} />
       <h1>Contact</h1>
       <p>
         For corrections, questions about a guide, privacy requests, or general inquiries, email us directly at{" "}

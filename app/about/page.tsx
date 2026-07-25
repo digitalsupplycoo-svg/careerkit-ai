@@ -1,13 +1,16 @@
-import type { Metadata } from "next";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { buildMetadata } from "@/lib/pageMetadata";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
+  path: "/about",
   title: "About CareerKit AI",
   description: "What CareerKit AI is, who it's for, and how the guides and tools are put together."
-};
+});
 
 export default function AboutPage() {
   return (
     <div className="page-container article-content">
+      <Breadcrumbs items={[{ name: "About" }]} />
       <h1>About CareerKit AI</h1>
       <p>
         CareerKit AI publishes practical, example-driven guides on job searching, resume writing, interviews, and

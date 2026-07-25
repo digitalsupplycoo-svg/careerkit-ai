@@ -3,8 +3,9 @@ title: "Negotiating Salary After a Job Offer"
 description: "A step-by-step approach to countering a job offer, with example scripts and common employer responses."
 category: "Salary & Offers"
 updated: "2026-04-28"
+related: ["how-to-ask-for-a-raise", "evaluating-a-job-offer-beyond-salary"]
+relatedTool: "salary-estimator"
 ---
-
 Most companies expect a counter and build some room into their initial number. Not negotiating at all is usually
 the most expensive mistake you can make in a job search — it costs you the gap between the first offer and what
 the company was actually willing to pay, every year you stay in that role.

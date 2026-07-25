@@ -3,8 +3,9 @@ title: "Writing a Resume Summary That Actually Works"
 description: "Why most resume summaries are wasted space, and how to write a short opening statement that gives a recruiter a reason to keep reading."
 category: "Resumes"
 updated: "2026-01-14"
+related: ["writing-resume-bullet-points-that-show-impact", "choosing-a-resume-format"]
+relatedTool: "resume-keyword-matcher"
 ---
-
 A resume summary sits at the top of the page, which means it either earns a recruiter's attention for the rest of the document or wastes the most valuable few seconds of their read. Most summaries fail because they describe a category of person ("results-driven professional") instead of communicating anything specific about the one person whose resume it actually is.
 
 ## What a summary is for

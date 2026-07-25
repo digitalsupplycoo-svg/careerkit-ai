@@ -3,8 +3,9 @@ title: "How Applicant Tracking Systems Actually Work"
 description: "A practical explanation of what ATS software does with your resume, and how to format for it without sounding robotic."
 category: "Resumes"
 updated: "2026-05-14"
+related: ["choosing-a-resume-format", "writing-resume-bullet-points-that-show-impact"]
+relatedTool: "resume-keyword-matcher"
 ---
-
 An Applicant Tracking System (ATS) is software that companies use to collect, store, and search resumes. Despite
 the popular image of a strict gatekeeper that auto-rejects resumes for missing keywords, most modern ATS
 platforms are closer to a searchable database with some parsing and filtering built in. Understanding what the

@@ -3,8 +3,9 @@ title: "How to Write a Cover Letter That Actually Gets Read"
 description: "Why most cover letters get skimmed and skipped, and a structure that holds a reader's attention in under 30 seconds."
 category: "Applications"
 updated: "2026-03-19"
+related: ["writing-a-resume-summary-that-works", "writing-resume-bullet-points-that-show-impact"]
+relatedTool: "resume-checklist-generator"
 ---
-
 A recruiter often spends less than a minute on a cover letter, if they open it at all. That doesn't mean cover
 letters are pointless — it means the first two sentences have to earn the rest of the read. Most cover letters
 fail at exactly that point by opening with something the recruiter already knows.

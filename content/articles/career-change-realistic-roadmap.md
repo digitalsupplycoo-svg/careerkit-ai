@@ -3,8 +3,9 @@ title: "Changing Careers: A Realistic Roadmap"
 description: "A step-by-step way to plan a career change without quitting first, including how to test a new field before committing to it."
 category: "Career Change"
 updated: "2026-04-02"
+related: ["freelancing-vs-full-time-tradeoffs", "evaluating-a-job-offer-beyond-salary"]
+relatedTool: "salary-estimator"
 ---
-
 Most career changes fail not because the new field was a bad fit, but because the transition was planned backwards: quit first, figure it out later. A more reliable order is to test the new direction while still employed, then make the jump once there's real evidence it's worth making.
 
 ## Step 1: Separate "I dislike my job" from "I'd like that field"

@@ -1,13 +1,16 @@
-import type { Metadata } from "next";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { buildMetadata } from "@/lib/pageMetadata";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
+  path: "/advertising-disclosure",
   title: "Advertising Disclosure",
   description: "How and where CareerKit AI plans to display advertising, and how it is labeled."
-};
+});
 
 export default function AdvertisingDisclosurePage() {
   return (
     <div className="page-container article-content">
+      <Breadcrumbs items={[{ name: "Advertising Disclosure" }]} />
       <h1>Advertising Disclosure</h1>
       <p>
         CareerKit AI intends to display contextual display advertising served through Google AdSense once the

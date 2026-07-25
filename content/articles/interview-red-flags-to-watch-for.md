@@ -3,8 +3,9 @@ title: "Red Flags to Watch for During a Job Interview"
 description: "Signals about management, workload, and culture that show up during an interview process, and how to ask about them without sounding confrontational."
 category: "Interviews"
 updated: "2026-05-08"
+related: ["preparing-for-a-panel-interview", "working-with-recruiters-what-to-expect"]
+relatedTool: "salary-estimator"
 ---
-
 An interview is an evaluation in both directions, but candidates often focus entirely on being evaluated and forget to actually watch for signals about whether the job is a good one. Some of the clearest information about a role comes through in how the interview process itself is run, not just in what people say.
 
 ## Vague answers about the role

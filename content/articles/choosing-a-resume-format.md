@@ -3,8 +3,9 @@ title: "Chronological, Functional, or Hybrid: Choosing a Resume Format"
 description: "What each resume format actually signals to a reader, and which situations call for something other than the default chronological layout."
 category: "Resumes"
 updated: "2026-02-27"
+related: ["handling-employment-gaps-on-your-resume", "writing-a-resume-summary-that-works"]
+relatedTool: "resume-checklist-generator"
 ---
-
 Most resumes should be chronological, and most resume advice that suggests otherwise is solving for a specific, less common situation. Understanding what each format signals helps you pick correctly instead of defaulting to whichever template you found first.
 
 ## Chronological: the default for a reason

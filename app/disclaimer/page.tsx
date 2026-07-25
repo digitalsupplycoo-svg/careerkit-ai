@@ -1,13 +1,16 @@
-import type { Metadata } from "next";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { buildMetadata } from "@/lib/pageMetadata";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
+  path: "/disclaimer",
   title: "Disclaimer",
   description: "Limits on the career, salary, and interview guidance provided by CareerKit AI."
-};
+});
 
 export default function DisclaimerPage() {
   return (
     <div className="page-container article-content">
+      <Breadcrumbs items={[{ name: "Disclaimer" }]} />
       <h1>Disclaimer</h1>
       <p>Last updated: 2026-07-24</p>
 

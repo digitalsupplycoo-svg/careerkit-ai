@@ -3,8 +3,9 @@ title: "How to Answer 'Tell Me About Yourself' in an Interview"
 description: "A simple present-past-future structure for the most common opening interview question."
 category: "Interviews"
 updated: "2026-02-11"
+related: ["preparing-for-behavioral-interview-questions", "following-up-after-a-job-interview"]
+relatedTool: "resume-checklist-generator"
 ---
-
 "Tell me about yourself" is usually the first question in an interview, and it sets the tone for everything that
 follows. It isn't an invitation to recite your entire life story or your resume line by line — the interviewer
 already has your resume. It's a chance to frame your background around the role in front of you.

@@ -3,8 +3,9 @@ title: "Writing Resume Bullet Points That Show Impact"
 description: "How to turn a list of duties into bullet points that show what actually changed because you did the work."
 category: "Resumes"
 updated: "2026-06-02"
+related: ["writing-a-resume-summary-that-works", "beating-applicant-tracking-systems"]
+relatedTool: "resume-checklist-generator"
 ---
-
 Most resume bullet points describe a duty: "Responsible for managing social media accounts." A hiring manager
 reading that has no idea whether you managed one account or twelve, whether engagement went up or down, or
 whether the role mattered to the business at all. The fix isn't better adjectives — it's showing what changed

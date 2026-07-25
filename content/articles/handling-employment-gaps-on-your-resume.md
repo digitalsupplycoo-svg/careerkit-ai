@@ -3,8 +3,9 @@ title: "Handling Employment Gaps on Your Resume"
 description: "When a gap needs an explanation and when it doesn't, how to format resume dates, and how to talk about gaps in an interview without over-apologizing."
 category: "Resumes"
 updated: "2026-02-18"
+related: ["choosing-a-resume-format", "writing-a-resume-summary-that-works"]
+relatedTool: "resume-checklist-generator"
 ---
-
 Employment gaps are far more common than resumes make them look, largely because most resumes hide them by using only years instead of months. That formatting choice is worth understanding before deciding whether your own gap needs active explanation.
 
 ## Not every gap needs to be addressed

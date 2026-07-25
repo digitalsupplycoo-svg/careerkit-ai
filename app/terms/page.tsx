@@ -1,14 +1,17 @@
-import type { Metadata } from "next";
 import { CONTACT_EMAIL } from "@/lib/env";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { buildMetadata } from "@/lib/pageMetadata";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
+  path: "/terms",
   title: "Terms of Service",
   description: "The terms that govern your use of CareerKit AI's guides and tools."
-};
+});
 
 export default function TermsPage() {
   return (
     <div className="page-container article-content">
+      <Breadcrumbs items={[{ name: "Terms of Service" }]} />
       <h1>Terms of Service</h1>
       <p>Last updated: 2026-07-24</p>
 

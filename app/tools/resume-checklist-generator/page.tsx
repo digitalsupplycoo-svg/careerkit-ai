@@ -1,15 +1,42 @@
-import type { Metadata } from "next";
 import ResumeChecklistTool from "@/components/ResumeChecklistTool";
 import AdSlot from "@/components/AdSlot";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import Faq from "@/components/Faq";
+import JsonLd from "@/components/JsonLd";
+import { softwareApplicationSchema } from "@/lib/schema";
+import { buildMetadata } from "@/lib/pageMetadata";
+import { getTool } from "@/lib/tools";
 
-export const metadata: Metadata = {
+const TOOL = getTool("resume-checklist-generator");
+
+export const metadata = buildMetadata({
+  path: TOOL.path,
   title: "Resume Checklist Generator",
   description: "Get a tailored, printable pre-submission resume checklist based on your experience level."
-};
+});
+
+const FAQS = [
+  {
+    question: "Does the checklist read or grade my actual resume file?",
+    answer:
+      "No. It doesn't accept a file upload or scan any document. It generates a list of items tailored to your experience level and ATS situation for you to check off manually against your own resume."
+  },
+  {
+    question: "Is anything I enter sent to a server?",
+    answer: "No. The checklist is generated entirely in your browser from the two questions you answer."
+  },
+  {
+    question: "Will checking every box guarantee an interview?",
+    answer:
+      "No. It's a formatting and completeness check, not a guarantee of outcomes — see the Limitations section below for what it can't evaluate."
+  }
+];
 
 export default function ResumeChecklistPage() {
   return (
     <div className="page-container">
+      <JsonLd data={softwareApplicationSchema(TOOL)} />
+      <Breadcrumbs items={[{ name: TOOL.name }]} />
       <h1>Resume Checklist Generator</h1>
       <p>
         Answer two quick questions and get a checklist tailored to your experience level. Everything runs in your
@@ -18,7 +45,7 @@ export default function ResumeChecklistPage() {
 
       <ResumeChecklistTool />
 
-      <div className="article-content" style={{ marginTop: 40, padding: 0 }}>
+      <div className="article-content tool-content" style={{ marginTop: "var(--space-5)" }}>
         <h2>How this tool works</h2>
         <p>
           The generator combines a base set of formatting and proofreading checks that apply to almost any resume
@@ -58,8 +85,12 @@ export default function ResumeChecklistPage() {
         </p>
       </div>
 
-      <div className="article-content" style={{ padding: 0 }}>
+      <div className="article-content tool-content">
         <AdSlot id="resume-tool-below-content" />
+      </div>
+
+      <div className="article-content tool-content">
+        <Faq items={FAQS} />
       </div>
     </div>
   );

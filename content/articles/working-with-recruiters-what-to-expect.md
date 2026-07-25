@@ -3,8 +3,9 @@ title: "Working With Recruiters: What They Can and Can't Do for You"
 description: "The difference between in-house and agency recruiters, what's reasonable to ask them for, and how to keep a productive relationship with one over time."
 category: "Job Search"
 updated: "2026-02-09"
+related: ["remote-job-search-strategies", "networking-for-introverts"]
+relatedTool: "resume-checklist-generator"
 ---
-
 Recruiters are often treated either as a shortcut to a job or as gatekeepers to route around, and both framings miss what the relationship actually is: a recruiter is working toward filling a specific set of roles, and being useful to that goal is what makes the relationship work well for you too.
 
 ## In-house vs. agency recruiters

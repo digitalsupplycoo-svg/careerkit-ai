@@ -3,8 +3,9 @@ title: "Networking for Introverts: Low-Pressure Strategies That Work"
 description: "Why networking doesn't require being the most outgoing person in the room, and specific, smaller-scale approaches that build real professional relationships."
 category: "Networking"
 updated: "2026-05-20"
+related: ["optimizing-linkedin-profile-for-recruiters", "working-with-recruiters-what-to-expect"]
+relatedTool: "resume-checklist-generator"
 ---
-
 Networking advice is often written for people who find rooms full of strangers energizing. If that's not you, the standard advice — work the room, hand out business cards, make small talk with everyone — can feel not just uncomfortable but genuinely ineffective, because it's optimized for a style of interaction you're fighting against the whole time.
 
 ## Depth over breadth

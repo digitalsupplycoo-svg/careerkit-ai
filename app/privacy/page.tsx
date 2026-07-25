@@ -1,17 +1,20 @@
-import type { Metadata } from "next";
 import { CONTACT_EMAIL } from "@/lib/env";
-
-export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "How CareerKit AI handles data, cookies, advertising, and locally stored tool data."
-};
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { buildMetadata } from "@/lib/pageMetadata";
 
 const EFFECTIVE_DATE = "2026-07-24";
 const LAST_UPDATED = "2026-07-24";
 
+export const metadata = buildMetadata({
+  path: "/privacy",
+  title: "Privacy Policy",
+  description: "How CareerKit AI handles data, cookies, advertising, and locally stored tool data."
+});
+
 export default function PrivacyPage() {
   return (
     <div className="page-container article-content">
+      <Breadcrumbs items={[{ name: "Privacy Policy" }]} />
       <h1>Privacy Policy</h1>
       <p>
         Effective date: {EFFECTIVE_DATE} · Last updated: {LAST_UPDATED}

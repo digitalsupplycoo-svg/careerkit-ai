@@ -3,8 +3,9 @@ title: "Preparing for a Panel Interview"
 description: "How panel interviews differ from one-on-one conversations, how to manage attention across multiple interviewers, and how to follow up afterward."
 category: "Interviews"
 updated: "2026-03-30"
+related: ["preparing-for-behavioral-interview-questions", "following-up-after-a-job-interview"]
+relatedTool: "resume-checklist-generator"
 ---
-
 A panel interview — multiple interviewers in the room or on the call at once — asks for a few adjustments beyond standard interview preparation, mostly around managing attention and information across more than one person at a time.
 
 ## Get the roster in advance if you can
