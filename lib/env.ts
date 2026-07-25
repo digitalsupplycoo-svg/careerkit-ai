@@ -2,8 +2,8 @@
 
 export const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "";
 export const ADSENSE_VERIFICATION = process.env.NEXT_PUBLIC_ADSENSE_VERIFICATION || "";
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "info@careerkit.online";
-export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@careerkit.example";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.careerkit.online";
+export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "info@careerkit.online";
 
 /** True only when a syntactically valid AdSense publisher ID is configured. */
 export function hasValidAdsenseClient(): boolean {
