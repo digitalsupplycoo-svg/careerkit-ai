@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <ConsentBanner />
+        <Analytics />
       </body>
     </html>
   );

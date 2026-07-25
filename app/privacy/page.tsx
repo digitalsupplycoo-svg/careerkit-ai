@@ -3,7 +3,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/pageMetadata";
 
 const EFFECTIVE_DATE = "2026-07-24";
-const LAST_UPDATED = "2026-07-24";
+const LAST_UPDATED = "2026-07-26";
 
 export const metadata = buildMetadata({
   path: "/privacy",
@@ -50,11 +50,18 @@ export default function PrivacyPage() {
         introduced in the future and you actively choose to use it.
       </p>
 
+      <h2>Analytics</h2>
+      <p>
+        We use Vercel Web Analytics to see aggregate traffic patterns for this site, such as how many people
+        visit a given page. It does not use cookies, does not collect personally identifiable information, and
+        does not track you across other websites. We only see anonymous, aggregated counts — never an
+        individual visitor&apos;s activity.
+      </p>
+
       <h2>Server logs</h2>
       <p>
         Our hosting provider may automatically log basic technical information about requests to this site, such
-        as IP address, browser type, and page requested, for security and reliability purposes. We do not
-        currently run a separate analytics platform on this site.
+        as IP address, browser type, and page requested, for security and reliability purposes.
       </p>
 
       <h2>Your choices</h2>
