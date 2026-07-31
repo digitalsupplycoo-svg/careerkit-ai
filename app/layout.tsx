@@ -46,6 +46,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={inter.variable}>
       <head>
+<script
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5834688335918066"
+  crossOrigin="anonymous"
+/>
         <JsonLd data={organizationSchema()} />
         <JsonLd data={websiteSchema()} />
         {/* Loaded ONLY when a real, validly-formatted publisher ID is configured.
