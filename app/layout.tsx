@@ -9,7 +9,7 @@ import JsonLd from "@/components/JsonLd";
 import { organizationSchema, websiteSchema, SITE_NAME } from "@/lib/schema";
 import { ADSENSE_CLIENT, ADSENSE_VERIFICATION, SITE_URL, hasValidAdsenseClient } from "@/lib/env";
 import "./globals.css";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 
 const DEFAULT_DESCRIPTION =
@@ -70,6 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <ConsentBanner />
         <Analytics />
+<SpeedInsights />
       </body>
     </html>
   );
