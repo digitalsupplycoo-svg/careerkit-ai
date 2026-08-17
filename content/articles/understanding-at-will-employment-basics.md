@@ -2,7 +2,7 @@
 title: "Understanding At-Will Employment and Your Rights"
 description: "What at-will employment means in practice, its exceptions, and where to find authoritative, jurisdiction-specific information — this is general education, not legal advice."
 category: "Workplace"
-updated: "2026-04-08"
+updated: "2026-08-18"
 related: ["evaluating-a-job-offer-beyond-salary", "interview-red-flags-to-watch-for"]
 relatedTool: "salary-estimator"
 ---
@@ -14,7 +14,7 @@ In an at-will employment relationship, either the employer or the employee can e
 
 ## The exceptions are where the real protection lives
 
-Even in an at-will arrangement, an employer generally cannot terminate someone for a legally protected reason. Common categories, though the specifics vary by jurisdiction, include termination based on protected characteristics (such as race, sex, religion, disability, or age, depending on local law), retaliation for reporting illegal activity or workplace safety concerns, retaliation for exercising a legal right (such as taking legally protected leave), or termination that violates an existing employment contract or a documented company policy that limits at-will status.
+Even in an at-will arrangement, an employer generally cannot terminate someone for a legally protected reason. Common categories, though the specifics vary by jurisdiction, include termination based on protected characteristics (such as race, sex, religion, disability, or age, depending on local law), retaliation for reporting illegal activity or workplace safety concerns, retaliation for exercising a legal right (such as taking legally protected leave), or termination that violates an existing employment contract or a documented company policy that limits at-will status. The [U.S. Equal Employment Opportunity Commission](https://www.eeoc.gov/prohibited-employment-policiespractices) explains the federal discrimination rules it enforces for hiring, discipline, discharge, pay, and other employment decisions.
 
 This means at-will status doesn't mean "no protections" — it means the burden generally shifts: if there's no contract, the employer doesn't need a specific business reason to let someone go, but they still can't act for a reason the law specifically prohibits.
 
@@ -24,7 +24,7 @@ Some employees are not at-will even in jurisdictions that default to it — for 
 
 ## It varies meaningfully by location
 
-Employment law, including how strictly at-will status applies and what the specific protected categories and exceptions are, varies by country, and within the United States, by state — some states recognize additional exceptions to at-will employment beyond federal protections. If you're trying to understand your specific situation, checking your state or country's labor department website, or consulting an employment attorney, gives you accurate, current, jurisdiction-specific information in a way that general articles like this one can't.
+Employment law, including how strictly at-will status applies and what the specific protected categories and exceptions are, varies by country, and within the United States, by state — some states recognize additional exceptions to at-will employment beyond federal protections. If you're trying to understand your specific situation, use the [U.S. Department of Labor directory of state labor offices](https://www.dol.gov/index.php/agencies/whd/state/contacts) to find the relevant agency, or consult an employment attorney. Those sources can provide current, jurisdiction-specific information in a way that general articles like this one cannot.
 
 ## What this means practically
 

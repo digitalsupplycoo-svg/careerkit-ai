@@ -2,7 +2,7 @@
 title: "Working With Recruiters: What They Can and Can't Do for You"
 description: "The difference between in-house and agency recruiters, what's reasonable to ask them for, and how to keep a productive relationship with one over time."
 category: "Job Search"
-updated: "2026-02-09"
+updated: "2026-08-18"
 related: ["remote-job-search-strategies", "networking-for-introverts"]
 relatedTool: "resume-checklist-generator"
 ---
@@ -30,7 +30,7 @@ Recruiters often ask for your current salary or salary expectations early. Where
 
 ## Working with more than one recruiter
 
-There's nothing wrong with working with multiple recruiters or agencies simultaneously during a job search, but keep track of which roles you've been submitted for through which recruiter — being submitted to the same role by two different agencies creates an awkward situation for the hiring company and can cost you the opportunity entirely. If a recruiter mentions a specific company, it's reasonable to check whether another recruiter has already submitted you there before agreeing to a second submission.
+There's nothing wrong with working with multiple recruiters or agencies simultaneously during a job search, but keep track of which roles you've been submitted for through which recruiter — being submitted to the same role by two different agencies creates an awkward situation for the hiring company and can cost you the opportunity entirely. A private [Job Application Tracker](/tools/job-tracker) makes it easier to record the company, recruiter, submission date, and next step in one browser. If a recruiter mentions a specific company, check whether another recruiter has already submitted you there before agreeing to a second submission.
 
 ## After the search ends
 

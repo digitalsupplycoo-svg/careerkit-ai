@@ -2,7 +2,7 @@
 title: "Following Up After a Job Interview"
 description: "What to send after an interview, when to send it, and how long to wait before a second follow-up."
 category: "Interviews"
-updated: "2026-01-22"
+updated: "2026-08-18"
 related: ["answering-tell-me-about-yourself", "preparing-for-a-panel-interview"]
 relatedTool: "resume-checklist-generator"
 ---
@@ -65,6 +65,10 @@ short window, especially if the company already told you a specific date to expe
 pressuring rather than interested. If you genuinely haven't heard anything after a reasonable stretch (several
 weeks past their stated timeline), it's fair to send one final note and then treat silence as a likely no while
 continuing your search elsewhere.
+
+Record the promised decision date and your one follow-up date in a [private Job Application
+Tracker](/tools/job-tracker) so the timing is based on what the employer said, not on memory across several
+interviews.
 
 ## What not to do
 

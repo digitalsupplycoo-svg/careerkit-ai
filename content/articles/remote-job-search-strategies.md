@@ -2,7 +2,7 @@
 title: "Remote Job Search: Where to Look and How to Stand Out"
 description: "Why generic job boards perform worse for remote roles, how to filter out fake remote listings, and what makes a remote application stronger."
 category: "Job Search"
-updated: "2026-01-30"
+updated: "2026-08-18"
 related: ["working-with-recruiters-what-to-expect", "optimizing-linkedin-profile-for-recruiters"]
 relatedTool: "resume-keyword-matcher"
 ---
@@ -27,7 +27,7 @@ Reading the full listing rather than just the title avoids wasted applications t
 Because remote hiring can't rely on watching how someone works in an office, employers weigh a few signals more heavily:
 
 - **Evidence of self-direction.** Concrete examples of managing your own priorities and deadlines without close supervision matter more than they would for an office role, because it's a real question a remote employer is trying to answer.
-- **Written communication quality.** Remote work runs disproportionately through writing — async updates, documentation, chat. A cover letter or application with clear, well-organized writing is itself a small demonstration of a core remote skill, not just a formality.
+- **Written communication quality.** Remote work runs disproportionately through writing — async updates, documentation, chat. A clear, well-organized application is itself a small demonstration of a core remote skill. Use the same discipline when [writing a cover letter that gets read](/articles/how-to-write-a-cover-letter-that-gets-read), rather than sending a generic note.
 - **Specific past remote or distributed experience**, if you have it — even informally, like leading a distributed volunteer project or freelancing with clients in other time zones. Naming it explicitly, rather than assuming it's implied, helps.
 
 ## The interview stage looks a bit different
@@ -39,3 +39,7 @@ Remote interviews often include a question about your home setup or how you stru
 Some remote employers adjust pay by the employee's location, others pay a single rate regardless of where you are. This is worth clarifying early, ideally before investing significant time in the process, since it can be a large difference in the eventual offer. It's a normal, expected question to ask a recruiter directly: "Is compensation for this role adjusted by location, or is it a single band regardless of where the employee is based?"
 
 Remote job searching rewards the same fundamentals as any job search — targeted applications, relevant evidence, and follow-through — but the higher application volume on genuinely remote roles makes precision in where you apply and how you present yourself matter more than usual.
+
+Keep role links, location restrictions, application dates, and follow-up deadlines in one place. CareerKit's
+[Job Application Tracker](/tools/job-tracker) stores that list only in your current browser, with no signup or
+server upload.
