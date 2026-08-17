@@ -14,26 +14,25 @@ a practical signal, not a Google rule, and is labeled as such.
 Confirmed by `npm run build`, `npm run lint`, `npm test`, and `npm run audit:adsense`
 (all passing as of this build):
 
-- [x] `npm run build` completes with zero errors — 41 routes generated, including all 22 article pages.
+- [x] `npm run build` completes with zero errors — 43 routes generated, including all 22 article pages.
 - [x] `npm run lint` passes with zero errors or warnings.
-- [x] `npm test` passes (17 tests: AdSense env-helper logic, article content integrity, keyword-matcher logic).
-- [x] `npm run audit:adsense` passes with 0 errors — only the two expected pre-launch warnings (see below).
+- [x] `npm test` passes (20 tests: AdSense env-helper logic, article content integrity, keyword-matcher logic).
+- [x] `npm run audit:adsense` passes with 0 errors and 0 warnings.
 - [x] Required pages exist: About, Privacy Policy, Terms, Disclaimer, Editorial Policy, Advertising Disclosure, Contact, 404.
 - [x] `AdSlot` never renders on excluded routes (Privacy, Terms, Disclaimer, Contact, 404, Editorial Policy, Advertising Disclosure, Job Tracker).
-- [x] `/ads.txt` route exists, returns HTTP 200 plain text, and never hardcodes a fake publisher ID — it only emits a real entry once `NEXT_PUBLIC_ADSENSE_CLIENT` is set to a validly formatted ID.
-- [x] No Google ad script loads anywhere unless `NEXT_PUBLIC_ADSENSE_CLIENT` matches the real `ca-pub-<digits>` format — verified by unit tests in `tests/env.test.ts`.
+- [x] `/ads.txt` returns HTTP 200 plain text and derives its seller entry from the same existing public publisher ID used by the verification script.
+- [x] Exactly one supported async Google ad script loads with the existing public publisher ID; visible units remain separately disabled until approval.
 - [x] No lorem ipsum, "TODO", "FIXME", or "coming soon" placeholder text anywhere in `app/` or `content/`.
 - [x] No fake testimonials, fake traffic counters, or guaranteed-approval language anywhere in the codebase (checked manually).
-- [x] `app/sitemap.ts` and `app/robots.ts` both exist; the Job Tracker (private, per-user local data) is correctly excluded from both.
+- [x] `app/sitemap.ts` and `app/robots.ts` both exist; the Job Tracker is excluded from the sitemap, crawlable, and marked `noindex, follow` so crawlers can observe the directive.
 - [x] All internal `/`-prefixed links across pages, components, and articles resolve to a real route — no broken links.
 - [x] All new routes (`/tools/resume-keyword-matcher`) are registered in the sitemap and in the header navigation.
 - [x] Mobile: viewport meta tag confirmed present in build output; header includes a working (client-side, stateful) mobile menu toggle; layout uses a responsive auto-fill grid and a 640px breakpoint for navigation.
 - [x] 22 original articles across 9 categories, each with complete title/description/category frontmatter, no duplicates.
 - [x] Every monetized page (articles, tool pages) carries substantial original explanatory content beyond the interactive element itself — not just the tool or user-generated output.
 
-**Expected warnings from `npm run audit:adsense` right now (correct, not errors):**
-- `NEXT_PUBLIC_ADSENSE_CLIENT is not set` — expected; ads stay fully disabled until you have a real publisher ID.
-- `NEXT_PUBLIC_SITE_URL is not set` (or still the placeholder `.example` domain) — expected until you deploy to a real domain.
+`npm run audit:adsense` currently reports no warnings. The publisher code and production site URL both have
+truthful code fallbacks; Vercel environment variables may override them when needed.
 
 **Known accepted risk:** `npm audit` still reports one Next.js advisory range that only fully
 resolves on a Next.js 16 upgrade, which is a breaking change out of scope for this build.
@@ -60,8 +59,8 @@ These cannot be verified by a script — they need a human judgment call from yo
 - [ ] **Review the Privacy Policy and Terms for your actual jurisdiction** and business setup;
       the drafts here are general-purpose, not jurisdiction-specific legal advice.
 - [ ] **Verify the contact email works** and that someone actually monitors it.
-- [ ] **Set real values** for `NEXT_PUBLIC_ADSENSE_CLIENT`, `NEXT_PUBLIC_ADSENSE_VERIFICATION`,
-      `NEXT_PUBLIC_SITE_URL`, and `NEXT_PUBLIC_CONTACT_EMAIL` once you have them (see `.env.example`).
+- [ ] **Verify Vercel values** for `NEXT_PUBLIC_ADSENSE_VERIFICATION`, `NEXT_PUBLIC_SITE_URL`, and
+      `NEXT_PUBLIC_CONTACT_EMAIL`; override `NEXT_PUBLIC_ADSENSE_CLIENT` only if the publisher ID changes.
 - [ ] **Confirm you're comfortable with the AdSlot placements** (below the hero, end of qualifying
       articles, end of tool pages) before enabling ads for real.
 
@@ -100,8 +99,8 @@ These cannot be verified by a script — they need a human judgment call from yo
    it independently once ads are actually running.
 6. Your `ca-pub-XXXXXXXXXXXXXXXX` publisher ID is normally issued as soon as you create the
    AdSense account — you don't need to wait for site approval to get it:
-   - Set `NEXT_PUBLIC_ADSENSE_CLIENT` to that value as soon as AdSense asks you to place the
-     verification code, so the snippet is live on the site for them to detect.
+   - Confirm the existing public publisher ID matches the account under review. Override
+     `NEXT_PUBLIC_ADSENSE_CLIENT` only if Google issued a different ID.
    - Set `NEXT_PUBLIC_ADSENSE_VERIFICATION` if AdSense gave you a separate verification string.
    - Redeploy. `/ads.txt` will automatically start serving the correct entry from the same ID —
      verify by visiting `https://yourdomain.com/ads.txt` directly in a browser and confirming it returns
@@ -113,9 +112,9 @@ These cannot be verified by a script — they need a human judgment call from yo
    `https://yourdomain.com/sitemap.xml` directly and confirm both load without authentication.
 9. Submit the site for AdSense review from the AdSense dashboard.
 10. **Keep visible ad units off until approval, even though the verification snippet is live.**
-    `NEXT_PUBLIC_ADSENSE_CLIENT` and ad-unit visibility are deliberately two separate switches:
-    - `NEXT_PUBLIC_ADSENSE_CLIENT` (set now, for verification) loads the AdSense script and
-      powers `/ads.txt`, but the `AdSlot` component stays inert from this alone.
+    Publisher configuration and ad-unit visibility are deliberately separate:
+    - The existing public publisher ID (or its `NEXT_PUBLIC_ADSENSE_CLIENT` override) loads the
+      verification script and powers `/ads.txt`, but `AdSlot` stays inert from this alone.
     - `NEXT_PUBLIC_ADSENSE_ENABLE_UNITS` is what actually turns on visible ad boxes — leave it
       unset (or `false`) until Google has approved the site, then set it to `true` and redeploy.
 11. Google's review timeline and outcome are entirely up to Google — there is no way to expedite
