@@ -6,8 +6,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: "*",
-        allow: "/",
-        disallow: ["/tools/job-tracker"] // private, per-user local data — no index value, no ads
+        allow: "/"
       }
     ],
     sitemap: `${SITE_URL}/sitemap.xml`

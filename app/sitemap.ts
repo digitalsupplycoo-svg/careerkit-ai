@@ -2,25 +2,20 @@ import type { MetadataRoute } from "next";
 import { getAllArticles } from "@/lib/articles";
 import { SITE_URL } from "@/lib/env";
 
-// Real dates the linked content last substantively changed — NOT `new Date()`.
-// A build-time `new Date()` would stamp every static route as "modified today"
-// on every deploy regardless of whether the page actually changed, which is
-// misleading to crawlers and can make Google trust lastmod on this site less.
-const SITE_CONTENT_UPDATED = "2026-07-24"; // last edit to policy/legal page copy
-const LEGAL_LAST_UPDATED = "2026-07-24"; // matches EFFECTIVE_DATE/LAST_UPDATED in privacy & terms pages
-
-const STATIC_ROUTES: Array<{ route: string; lastModified: string }> = [
-  { route: "", lastModified: SITE_CONTENT_UPDATED },
-  { route: "about", lastModified: SITE_CONTENT_UPDATED },
-  { route: "privacy", lastModified: LEGAL_LAST_UPDATED },
-  { route: "terms", lastModified: LEGAL_LAST_UPDATED },
-  { route: "disclaimer", lastModified: LEGAL_LAST_UPDATED },
-  { route: "editorial-policy", lastModified: SITE_CONTENT_UPDATED },
-  { route: "advertising-disclosure", lastModified: SITE_CONTENT_UPDATED },
-  { route: "contact", lastModified: SITE_CONTENT_UPDATED },
-  { route: "tools/resume-checklist-generator", lastModified: SITE_CONTENT_UPDATED },
-  { route: "tools/salary-estimator", lastModified: SITE_CONTENT_UPDATED },
-  { route: "tools/resume-keyword-matcher", lastModified: SITE_CONTENT_UPDATED }
+// Static pages do not have a reliable page-level modification source. Omitting
+// lastModified is more accurate than assigning one shared deploy/content date.
+const STATIC_ROUTES = [
+  "",
+  "about",
+  "privacy",
+  "terms",
+  "disclaimer",
+  "editorial-policy",
+  "advertising-disclosure",
+  "contact",
+  "tools/resume-checklist-generator",
+  "tools/salary-estimator",
+  "tools/resume-keyword-matcher"
   // /tools/job-tracker intentionally excluded: private, per-user local data, noindex.
 ];
 
@@ -31,12 +26,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // whichever article changed most recently, not a fixed date.
   const mostRecentArticleUpdate = articles.reduce(
     (latest, article) => (article.updated > latest ? article.updated : latest),
-    SITE_CONTENT_UPDATED
+    "1970-01-01"
   );
 
-  const staticEntries = STATIC_ROUTES.map(({ route, lastModified }) => ({
-    url: `${SITE_URL}/${route}`.replace(/\/$/, "") || SITE_URL,
-    lastModified: new Date(lastModified)
+  const staticEntries = STATIC_ROUTES.map((route) => ({
+    url: `${SITE_URL}/${route}`.replace(/\/$/, "") || SITE_URL
   }));
 
   const articlesIndexEntry = {

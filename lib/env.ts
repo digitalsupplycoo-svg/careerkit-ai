@@ -1,6 +1,10 @@
 // Central place to read public env vars so no other file guesses or hardcodes values.
 
-export const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "";
+// AdSense publisher IDs are public by design and this exact ID was already
+// shipped in the site's verification script. Keeping it here also guarantees
+// that the same authorized seller is emitted by /ads.txt.
+export const EXISTING_ADSENSE_CLIENT = "ca-pub-5834688335918066";
+export const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT || EXISTING_ADSENSE_CLIENT;
 export const ADSENSE_VERIFICATION = process.env.NEXT_PUBLIC_ADSENSE_VERIFICATION || "";
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.careerkit.online";
 export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "info@careerkit.online";

@@ -18,10 +18,11 @@ describe("lib/env AdSense helpers", () => {
     process.env = { ...ORIGINAL_ENV };
   });
 
-  it("treats an empty client ID as invalid", async () => {
+  it("falls back to the existing public publisher ID when the env value is absent", async () => {
     delete process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
-    const { hasValidAdsenseClient } = await freshEnv();
-    expect(hasValidAdsenseClient()).toBe(false);
+    const { ADSENSE_CLIENT, EXISTING_ADSENSE_CLIENT, hasValidAdsenseClient } = await freshEnv();
+    expect(ADSENSE_CLIENT).toBe(EXISTING_ADSENSE_CLIENT);
+    expect(hasValidAdsenseClient()).toBe(true);
   });
 
   it("rejects a malformed client ID", async () => {
@@ -36,10 +37,10 @@ describe("lib/env AdSense helpers", () => {
     expect(hasValidAdsenseClient()).toBe(true);
   });
 
-  it("never invents an ads.txt publisher id when unconfigured", async () => {
+  it("derives ads.txt from the existing public publisher ID when the env value is absent", async () => {
     delete process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
-    const { adsTxtPublisherId } = await freshEnv();
-    expect(adsTxtPublisherId()).toBeNull();
+    const { EXISTING_ADSENSE_CLIENT, adsTxtPublisherId } = await freshEnv();
+    expect(adsTxtPublisherId()).toBe(EXISTING_ADSENSE_CLIENT.replace(/^ca-/, ""));
   });
 
   it("converts ca-pub- to pub- for ads.txt only when the id is valid", async () => {
@@ -61,11 +62,11 @@ describe("lib/env AdSense helpers", () => {
     expect(shouldRenderAdUnits()).toBe(false);
   });
 
-  it("does not render ad units from the enable flag alone, without a valid client id", async () => {
+  it("can render units from the approval flag using the existing publisher ID", async () => {
     delete process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
     process.env.NEXT_PUBLIC_ADSENSE_ENABLE_UNITS = "true";
     const { shouldRenderAdUnits } = await freshEnv();
-    expect(shouldRenderAdUnits()).toBe(false);
+    expect(shouldRenderAdUnits()).toBe(true);
   });
 
   it("renders ad units only once both a valid client id AND the enable flag are set", async () => {
