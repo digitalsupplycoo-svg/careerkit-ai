@@ -17,6 +17,16 @@ export default function ConsentBanner() {
   useEffect(() => {
     const stored = window.localStorage.getItem(STORAGE_KEY);
     setDismissed(stored === "true");
+
+    function reopenPrivacyChoices(event: MouseEvent) {
+      const target = event.target as Element | null;
+      if (target?.closest('[data-role="reopen-cmp"]')) {
+        setDismissed(false);
+      }
+    }
+
+    document.addEventListener("click", reopenPrivacyChoices);
+    return () => document.removeEventListener("click", reopenPrivacyChoices);
   }, []);
 
   if (dismissed) return null;
@@ -24,9 +34,8 @@ export default function ConsentBanner() {
   return (
     <div className="consent-banner" role="dialog" aria-label="Privacy notice">
       <p>
-        This site does not show personalized ads or set advertising cookies at this time.
-        When advertising is enabled, a certified consent management platform will ask for
-        your choice before anything is personalized. You can read details in our{" "}
+        CareerKit does not show personalized ads or set advertising cookies at this time. If that changes, a
+        certified consent platform will ask before anything is personalized. Read our{" "}
         <a href="/privacy">Privacy Policy</a>.
       </p>
       <button

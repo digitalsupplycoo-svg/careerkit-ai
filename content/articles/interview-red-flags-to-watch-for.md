@@ -2,7 +2,7 @@
 title: "Red Flags to Watch for During a Job Interview"
 description: "Signals about management, workload, and culture that show up during an interview process, and how to ask about them without sounding confrontational."
 category: "Interviews"
-updated: "2026-05-08"
+updated: "2026-08-18"
 related: ["preparing-for-a-panel-interview", "working-with-recruiters-what-to-expect"]
 relatedTool: "salary-estimator"
 ---
@@ -35,3 +35,7 @@ Where possible, cross-check claims made during the interview against outside sou
 ## None of this means walking away automatically
 
 Red flags exist on a spectrum, and very few companies are entirely free of them. The goal of watching for these signals isn't to find a perfect employer — it's to go into a decision with clear eyes about the trade-offs you're accepting, rather than being surprised by something three months into the job that was actually visible during the interview process the whole time.
+
+If the concern is a broad claim about termination rights or job security in the United States, start with the
+general guide to [at-will employment and its exceptions](/articles/understanding-at-will-employment-basics), then
+verify the rule with the relevant state agency or a qualified attorney.

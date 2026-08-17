@@ -42,6 +42,25 @@ export function websiteSchema() {
   };
 }
 
+export function collectionPageSchema(articles: Array<{ slug: string; title: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "CareerKit AI Career Guides",
+    url: `${SITE_URL}/articles`,
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: articles.length,
+      itemListElement: articles.map((article, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: article.title,
+        url: `${SITE_URL}/articles/${article.slug}`
+      }))
+    }
+  };
+}
+
 export function breadcrumbSchema(items: BreadcrumbItem[]) {
   return {
     "@context": "https://schema.org",

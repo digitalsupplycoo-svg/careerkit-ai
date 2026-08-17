@@ -15,7 +15,7 @@ policy-readiness in mind — see `ADSENSE-LAUNCH-CHECKLIST.md` before applying f
 ```bash
 npm install
 cp .env.example .env.local
-# edit .env.local — leave NEXT_PUBLIC_ADSENSE_CLIENT empty until you have a real AdSense ID
+# edit .env.local — the existing public AdSense ID is already the code fallback
 ```
 
 ## Local development

@@ -35,6 +35,22 @@ export default function EditorialPolicyPage() {
         Each guide lists the date it was last substantively updated.
       </p>
 
+      <h2>Sources and updates</h2>
+      <p>
+        When a factual or legal claim benefits from verification, we prefer primary sources such as government
+        agencies and link them near the relevant passage. An updated date changes only after a substantive edit,
+        not simply because a page was rebuilt or redeployed. General career advice is clearly separated from
+        legal, financial, or jurisdiction-specific guidance.
+      </p>
+
+      <h2>Tool methodology and privacy</h2>
+      <p>
+        Each tool page explains what inputs it uses, how its calculation works, its limitations, and whether data
+        leaves the browser. Our tools do not claim access to proprietary employer systems or real-time salary
+        databases when they do not have it. See the <a href="/tools/salary-estimator">Salary Range Estimator</a>{" "}
+        and <a href="/tools/resume-keyword-matcher">Resume Keyword Matcher</a> for examples.
+      </p>
+
       <h2>Corrections</h2>
       <p>
         If you spot an error or an outdated recommendation, email{" "}

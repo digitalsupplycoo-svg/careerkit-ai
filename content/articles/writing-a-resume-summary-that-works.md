@@ -2,7 +2,7 @@
 title: "Writing a Resume Summary That Actually Works"
 description: "Why most resume summaries are wasted space, and how to write a short opening statement that gives a recruiter a reason to keep reading."
 category: "Resumes"
-updated: "2026-01-14"
+updated: "2026-08-18"
 related: ["writing-resume-bullet-points-that-show-impact", "choosing-a-resume-format"]
 relatedTool: "resume-keyword-matcher"
 ---
@@ -33,6 +33,10 @@ Not every resume needs one. Early-career resumes with limited work history often
 ## Tailoring it per application
 
 A generic summary written once and left unchanged across every application defeats its own purpose, since the strongest version speaks directly to the specific role. This doesn't require rewriting from scratch each time — most people keep two or three versions calibrated to the types of roles they're applying for, and adjust the emphasis (which accomplishment to lead with, which skill to name) to match the specific posting.
+
+After tailoring the summary, the [Resume Keyword Matcher](/tools/resume-keyword-matcher) can flag important
+terms that appear in the posting but nowhere in your resume. Treat those as prompts to review, not words to add
+unless they accurately describe your experience.
 
 ## What to leave out
 

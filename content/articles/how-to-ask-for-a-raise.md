@@ -2,7 +2,7 @@
 title: "How to Ask for a Raise Without Threatening to Quit"
 description: "How to build a case for a raise using evidence instead of ultimatums, when to time the conversation, and what to do if the answer is no."
 category: "Salary & Offers"
-updated: "2026-04-15"
+updated: "2026-08-18"
 related: ["negotiating-salary-after-a-job-offer", "evaluating-a-job-offer-beyond-salary"]
 relatedTool: "salary-estimator"
 ---
@@ -12,7 +12,7 @@ Asking for a raise without an outside offer in hand can feel like it has less le
 
 Vague statements ("I've been working really hard" or "I feel like I deserve more") are easy for a manager to acknowledge without acting on. A stronger case documents specifics: concrete accomplishments since your last raise or review, with results where possible, and how your responsibilities have grown compared to when your current pay was set. If you've taken on work outside your original job description, or your role has effectively expanded, name that explicitly rather than assuming your manager has tracked it as closely as you have.
 
-Market data helps too, gathered from a couple of reputable salary sources for your role, level, and location. This isn't about presenting an ultimatum figure — it's about grounding your ask in something other than a feeling that you're underpaid.
+Market data helps too, gathered from a couple of reputable salary sources for your role, level, and location. Once you have a credible base figure, the [Salary Range Estimator](/tools/salary-estimator) can show the simple experience-and-skills adjustment it applies; it is not a substitute for that market data. This isn't about presenting an ultimatum figure — it's about grounding your ask in something other than a feeling that you're underpaid.
 
 ## Timing matters more than people expect
 

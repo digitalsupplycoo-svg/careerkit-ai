@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getArticleBySlug, getArticleSlugs } from "@/lib/articles";
 import { getTool } from "@/lib/tools";
@@ -46,36 +47,36 @@ export default function ArticlePage({ params }: Props) {
   const relatedTool = article.relatedTool ? getTool(article.relatedTool) : null;
 
   return (
-    <div>
+    <article className="article-content">
       <JsonLd data={articleSchema(article)} />
-
-      <div className="article-content">
+      <header>
         <Breadcrumbs
           items={[
             { name: "Guides", path: "/articles" },
             { name: article.title }
           ]}
         />
-        <p className="meta-text">
-          {article.category} · {article.readingTime} · Updated {article.updated}
+        <p className="meta-text article-byline">
+          By <Link href="/editorial-policy">CareerKit AI Editorial Team</Link> · {article.category} · {article.readingTime} ·
+          Updated <time dateTime={article.updated}>{article.updated}</time>
         </p>
         <h1>{article.title}</h1>
-      </div>
+      </header>
 
       <div
-        className="article-content"
+        className="article-body"
         dangerouslySetInnerHTML={{ __html: article.html }}
       />
 
       {eligibleForAds && (
-        <div className="article-content">
+        <aside aria-label="Advertisement">
           <AdSlot id={`article-${article.slug}-end`} />
-        </div>
+        </aside>
       )}
 
       {(relatedArticles.length > 0 || relatedTool) && (
-        <div className="article-content">
-          <h2>Related guides</h2>
+        <aside className="related-content" aria-labelledby="related-guides-heading">
+          <h2 id="related-guides-heading">Related guides and tools</h2>
           <p>
             {relatedArticles.length > 0 && (
               <>
@@ -83,7 +84,7 @@ export default function ArticlePage({ params }: Props) {
                 {relatedArticles.map((related, index) => (
                   <span key={related.slug}>
                     {index > 0 && " and "}
-                    <a href={`/articles/${related.slug}`}>{related.title.toLowerCase()}</a>
+                    <Link href={`/articles/${related.slug}`}>{related.title.toLowerCase()}</Link>
                   </span>
                 ))}
                 .{" "}
@@ -92,18 +93,16 @@ export default function ArticlePage({ params }: Props) {
             {relatedTool && (
               <>
                 When you&apos;re ready to put it into practice, try our{" "}
-                <a href={relatedTool.path}>{relatedTool.name}</a>.
+                <Link href={relatedTool.path}>{relatedTool.name}</Link>.
               </>
             )}
           </p>
-        </div>
+        </aside>
       )}
 
-      <div className="article-content">
-        <p className="meta-text">
-          <a href="/articles">← Back to all guides</a>
-        </p>
-      </div>
-    </div>
+      <p className="meta-text">
+        <Link href="/articles">← Back to all guides</Link>
+      </p>
+    </article>
   );
 }

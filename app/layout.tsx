@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ConsentBanner from "@/components/ConsentBanner";
 import JsonLd from "@/components/JsonLd";
 import { organizationSchema, websiteSchema, SITE_NAME } from "@/lib/schema";
-import { ADSENSE_CLIENT, ADSENSE_VERIFICATION, SITE_URL, hasValidAdsenseClient } from "@/lib/env";
+import { ADSENSE_CLIENT, ADSENSE_VERIFICATION, SITE_URL } from "@/lib/env";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -46,23 +45,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={inter.variable}>
       <head>
-<script
-  async
-  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5834688335918066"
-  crossOrigin="anonymous"
-/>
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
+        <script
+          async
+          crossOrigin="anonymous"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+        />
         <JsonLd data={organizationSchema()} />
         <JsonLd data={websiteSchema()} />
-        {/* Loaded ONLY when a real, validly-formatted publisher ID is configured.
-            Never a placeholder or fake ad script. See lib/env.ts. */}
-        {hasValidAdsenseClient() && (
-          <Script
-            async
-            crossOrigin="anonymous"
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
-            strategy="afterInteractive"
-          />
-        )}
       </head>
       <body>
         <Header />
@@ -70,7 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <ConsentBanner />
         <Analytics />
-<SpeedInsights />
+        <SpeedInsights />
       </body>
     </html>
   );
