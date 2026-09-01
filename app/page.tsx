@@ -8,11 +8,13 @@ import ToolIcon from "@/components/ToolIcon";
 import HeroChecklistTeaser from "@/components/HeroChecklistTeaser";
 import { buildMetadata } from "@/lib/pageMetadata";
 
-export const metadata = buildMetadata({
-  path: "/",
-  description:
-    "Free, original career guides and practical tools for resumes, interviews, salary negotiation, and job search strategy."
-});
+const HOME_DESCRIPTION =
+  "Free, original career guides and practical tools for resumes, interviews, salary negotiation, and job search strategy.";
+
+export const metadata = {
+  ...buildMetadata({ path: "/", description: HOME_DESCRIPTION }),
+  title: { absolute: "CareerKit AI — Free Career Guides & Job Search Tools" }
+};
 
 const HOME_FAQS = [
   {

@@ -75,7 +75,9 @@ for (const [label, rel] of Object.entries(REQUIRED_PAGES)) {
 
 // 2. AdSense client ID format, if configured
 console.log("\n2. AdSense client configuration");
-const client = env.NEXT_PUBLIC_ADSENSE_CLIENT || "";
+const envModule = readIfExists(path.join(ROOT, "lib/env.ts")) || "";
+const existingClientMatch = envModule.match(/EXISTING_ADSENSE_CLIENT\s*=\s*["'](ca-pub-\d{10,})["']/);
+const client = env.NEXT_PUBLIC_ADSENSE_CLIENT || existingClientMatch?.[1] || "";
 const enableUnits = env.NEXT_PUBLIC_ADSENSE_ENABLE_UNITS === "true";
 if (!client) {
   warn("NEXT_PUBLIC_ADSENSE_CLIENT is not set — verification script and ad units both stay off.");
@@ -217,7 +219,8 @@ fs.existsSync(path.join(ROOT, "app/robots.ts")) ? ok("app/robots.ts exists") : f
 
 // 8. Site URL configuration
 console.log("\n8. Production URL configuration");
-const siteUrl = env.NEXT_PUBLIC_SITE_URL || "";
+const defaultSiteUrlMatch = envModule.match(/SITE_URL\s*=\s*process\.env\.NEXT_PUBLIC_SITE_URL\s*\|\|\s*["'](https:\/\/[^"']+)["']/);
+const siteUrl = env.NEXT_PUBLIC_SITE_URL || defaultSiteUrlMatch?.[1] || "";
 if (!siteUrl) {
   warn("NEXT_PUBLIC_SITE_URL is not set — metadataBase/sitemap will fall back to the placeholder example domain");
 } else if (siteUrl.includes(".example")) {

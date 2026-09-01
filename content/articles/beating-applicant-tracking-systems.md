@@ -2,7 +2,7 @@
 title: "How Applicant Tracking Systems Actually Work"
 description: "A practical explanation of what ATS software does with your resume, and how to format for it without sounding robotic."
 category: "Resumes"
-updated: "2026-05-14"
+updated: "2026-08-18"
 related: ["choosing-a-resume-format", "writing-resume-bullet-points-that-show-impact"]
 relatedTool: "resume-keyword-matcher"
 ---
@@ -46,6 +46,10 @@ Matching language from the job posting helps, but not because of a magic keyword
 not because you lack the skill, but because the exact phrase isn't present. The fix is simple: when a posting
 names a specific tool, methodology, or certification you actually have, use that exact term somewhere in your
 resume.
+
+To compare the language without uploading either document, use CareerKit's [Resume Keyword
+Matcher](/tools/resume-keyword-matcher). It counts exact word overlap in your browser; it does not claim to
+reproduce an employer's ATS score, and its missing-term list still needs human judgment.
 
 **Example:** A posting requires "experience with SQL and Tableau." If your resume currently says "built dashboards
 using various BI tools," rewrite it to name the specific tools: "Built weekly sales dashboards in Tableau, sourced

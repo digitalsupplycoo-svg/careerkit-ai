@@ -21,7 +21,7 @@ GitHub API — see `PUBLISHING.md` for day-to-day usage and setup.
 ```bash
 npm install
 cp .env.example .env.local
-# edit .env.local — leave NEXT_PUBLIC_ADSENSE_CLIENT empty until you have a real AdSense ID
+# edit .env.local — the existing public AdSense ID is already the code fallback
 ```
 
 ## Local development

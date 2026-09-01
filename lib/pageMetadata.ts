@@ -37,7 +37,8 @@ export function buildMetadata(input: PageMetadataInput): Metadata {
     ...(title ? { title } : {}),
     description,
     alternates: { canonical: path },
-    ...(noIndex ? { robots: { index: false, follow: false } } : {}),
+    // Keep noindex pages crawlable so robots can actually observe the directive.
+    ...(noIndex ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       siteName: SITE_NAME,
       locale: "en_US",
