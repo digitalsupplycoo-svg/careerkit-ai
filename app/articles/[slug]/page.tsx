@@ -7,6 +7,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import { articleSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/pageMetadata";
+import { MIN_WORDS_INTERNAL_SAFEGUARD } from "@/lib/contentSafeguards";
 
 interface Props {
   params: { slug: string };
@@ -28,12 +29,6 @@ export function generateMetadata({ params }: Props): Metadata {
     modifiedTime: article.updated
   });
 }
-
-// This is an internal, self-imposed safeguard against showing ads next to very
-// thin pages — NOT a published Google/AdSense word-count requirement (Google
-// does not publish one). It exists so a near-empty or barely-started article
-// can never carry an ad slot. See scripts/audit-adsense.mjs.
-const MIN_WORDS_INTERNAL_SAFEGUARD = 350;
 
 export default function ArticlePage({ params }: Props) {
   const article = getArticleBySlug(params.slug);

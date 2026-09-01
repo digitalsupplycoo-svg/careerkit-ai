@@ -1,9 +1,15 @@
 # CareerKit AI
 
-A Next.js 14 (App Router, TypeScript) site: 22 original career/job-search guides plus three
+A Next.js 14 (App Router, TypeScript) site: 46 original career/job-search guides plus seven
 free, entirely client-side tools (resume checklist generator, salary range estimator, resume
-keyword matcher) and a private local-only job application tracker. Built with AdSense
-policy-readiness in mind — see `ADSENSE-LAUNCH-CHECKLIST.md` before applying for AdSense.
+keyword matcher, cover letter generator, LinkedIn headline optimizer, interview prep generator,
+job offer comparator) and a private local-only job application tracker. Built in a strict
+black-and-white design system, with AdSense policy-readiness in mind — see
+`LAUNCH-CHECKLIST.md` before applying for AdSense.
+
+New articles can also be published without touching git or markdown files, via a
+password-protected `/admin/new-post` page that commits directly to this repo through the
+GitHub API — see `PUBLISHING.md` for day-to-day usage and setup.
 
 ## Requirements
 

@@ -54,6 +54,12 @@ export function getArticleBySlug(slug: string): Article | null {
   };
 }
 
+/** Unique, sorted list of every category currently used across content/articles/ — powers the admin New Post form's category dropdown. */
+export function getAllCategories(): string[] {
+  const categories = new Set(getAllArticles().map((a) => a.category));
+  return Array.from(categories).sort((a, b) => a.localeCompare(b));
+}
+
 export function getAllArticles(): ArticleMeta[] {
   return getArticleSlugs()
     .map((slug) => getArticleBySlug(slug))

@@ -11,7 +11,7 @@
  * It CANNOT verify: whether your content is genuinely original and useful
  * to a human reader, whether the site will pass Google's manual review, or
  * whether your traffic is organic and policy-compliant. Those require human
- * judgment — see ADSENSE-LAUNCH-CHECKLIST.md.
+ * judgment — see LAUNCH-CHECKLIST.md.
  */
 
 import fs from "node:fs";
@@ -126,7 +126,9 @@ const EXCLUDED_ROUTES = [
   "app/not-found.tsx",
   "app/editorial-policy/page.tsx",
   "app/advertising-disclosure/page.tsx",
-  "app/tools/job-tracker/page.tsx"
+  "app/tools/job-tracker/page.tsx",
+  "app/admin/login/page.tsx",
+  "app/admin/new-post/page.tsx"
 ];
 for (const rel of EXCLUDED_ROUTES) {
   const content = readIfExists(path.join(ROOT, rel));
@@ -230,9 +232,11 @@ if (!siteUrl) {
 console.log("\n9. Internal links");
 const knownRoutes = new Set([
   "/", "/about", "/articles", "/privacy", "/terms", "/disclaimer",
-  "/editorial-policy", "/advertising-disclosure", "/contact",
+  "/editorial-policy", "/advertising-disclosure", "/contact", "/tools",
   "/tools/resume-checklist-generator", "/tools/salary-estimator",
-  "/tools/resume-keyword-matcher", "/tools/job-tracker"
+  "/tools/resume-keyword-matcher", "/tools/job-tracker",
+  "/tools/cover-letter", "/tools/headline-optimizer",
+  "/tools/interview-prep", "/tools/offer-comparator"
 ]);
 const articleSlugs = new Set(articleFiles.map((f) => f.replace(/\.md$/, "")));
 for (const slug of articleSlugs) knownRoutes.add(`/articles/${slug}`);
@@ -262,7 +266,7 @@ console.log(`Errors:   ${errors.length}`);
 console.log(`Warnings: ${warnings.length}`);
 console.log("\nThis script checks technical readiness only. It does not and cannot replace");
 console.log("Google's manual review of content quality, originality, and traffic. See");
-console.log("ADSENSE-LAUNCH-CHECKLIST.md for the items that require human judgment.\n");
+console.log("LAUNCH-CHECKLIST.md for the items that require human judgment.\n");
 
 if (errors.length > 0) {
   process.exit(1);
