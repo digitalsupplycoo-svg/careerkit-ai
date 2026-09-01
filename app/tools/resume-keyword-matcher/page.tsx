@@ -38,7 +38,7 @@ export default function ResumeKeywordMatcherPage() {
   return (
     <div className="page-container">
       <JsonLd data={softwareApplicationSchema(TOOL)} />
-      <Breadcrumbs items={[{ name: TOOL.name }]} />
+      <Breadcrumbs items={[{ name: "Free tools", path: "/tools" }, { name: TOOL.name }]} />
       <h1>Resume Keyword Matcher</h1>
       <p>
         Paste a job description and your resume text to see which frequently used terms from the posting also

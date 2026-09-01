@@ -1,41 +1,47 @@
 :root {
-  /* ---- Neutral scale (warm-tinted, matches the warm-white background) ---- */
-  --gray-50: #fafaf8;
-  --gray-100: #f3f2ee;
-  --gray-200: #e8e6e0;
-  --gray-300: #d6d3cb;
-  --gray-400: #b3afa3;
-  --gray-500: #8f8b7e;
-  --gray-600: #6f6b5e;
-  --gray-700: #56534a;
-  --gray-800: #3a3833;
-  --gray-900: #1a1a2e;
+  /* Lets the browser theme native form-control chrome (number-input spinners,
+     date pickers, the default focus ring) to match the page's actual light/dark
+     mode, instead of always rendering the OS's light-mode defaults. */
+  color-scheme: light dark;
 
-  /* ---- Brand: one deep primary for identity, one vivid accent for CTAs ---- */
-  --color-primary: #1b3b6f;
-  --color-primary-dark: #12294f;
-  --color-accent: #2f6fed;
-  --color-accent-dark: #1e54c7;
-  --color-accent-soft: #eaf1fe;
-  --color-navy: #0f1e3d;
+  /* ---- Neutral scale (pure grayscale — ultra-premium black & white system) ---- */
+  --gray-50: #ffffff;
+  --gray-100: #f7f7f7;
+  --gray-200: #e5e5e5;
+  --gray-300: #cccccc;
+  --gray-400: #aaaaaa;
+  --gray-500: #888888;
+  --gray-600: #666666;
+  --gray-700: #444444;
+  --gray-800: #222222;
+  --gray-900: #111111;
+
+  /* ---- Brand: no color — black is the primary, black is the accent ----
+     "Dark" variants aren't a darker hue, they're a one-step gray shift used
+     purely as a hover/active signal, since true black can't get darker. */
+  --color-primary: #000000;
+  --color-primary-dark: #222222;
+  --color-accent: #000000;
+  --color-accent-dark: #222222;
+  --color-accent-soft: #f2f2f2;
+  --color-navy: #000000;
   /* Text color placed on top of --color-accent (buttons, CTA chips). Kept as its
-     own token because the dark-mode accent is brightened for text-on-dark-bg
-     contrast, which makes white-on-accent fail AA for button text — see the
-     dark-mode override below. */
+     own token because the dark-mode accent flips to white, which needs black
+     text on top instead — see the dark-mode override below. */
   --color-on-accent: #ffffff;
 
   /* ---- Semantic surface/text tokens ---- */
   --color-bg: var(--gray-50);
   --color-surface: #ffffff;
-  --color-ink: var(--gray-900);
-  --color-muted: var(--gray-600);
-  --color-border: var(--gray-200);
+  --color-ink: #000000;
+  --color-muted: var(--gray-700);
+  --color-border: var(--gray-300);
 
-  /* ---- Depth: soft, layered — never a single harsh line ---- */
-  --shadow-xs: 0 1px 2px rgba(26, 26, 46, 0.05);
-  --shadow-sm: 0 1px 2px rgba(26, 26, 46, 0.04), 0 2px 4px rgba(26, 26, 46, 0.04);
-  --shadow-md: 0 2px 4px rgba(26, 26, 46, 0.04), 0 8px 16px rgba(26, 26, 46, 0.06);
-  --shadow-lg: 0 4px 8px rgba(26, 26, 46, 0.05), 0 16px 32px rgba(26, 26, 46, 0.1);
+  /* ---- Depth: subtle, never a colored tint — pure black shadow at low opacity ---- */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.05), 0 8px 16px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.06), 0 16px 32px rgba(0, 0, 0, 0.1);
 
   /* ---- One radius, everywhere ---- */
   --radius: 12px;
@@ -71,24 +77,25 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #14141f;
-    --color-surface: #1c1c2b;
-    --color-ink: #f2f1ed;
-    --color-muted: #a29ecb;
-    --color-border: #2e2e42;
+    --color-bg: #000000;
+    --color-surface: #000000;
+    --color-ink: #ffffff;
+    --color-muted: var(--gray-500);
+    --color-border: var(--gray-800);
 
-    --color-primary: #7fa4e8;
-    --color-primary-dark: #a9c2ef;
-    --color-accent: #5b8dff;
-    --color-accent-dark: #85aaff;
-    --color-accent-soft: rgba(91, 141, 255, 0.16);
-    --color-navy: #0b1530;
-    --color-on-accent: #1a1a2e;
+    --color-primary: #ffffff;
+    --color-primary-dark: var(--gray-300);
+    --color-accent: #ffffff;
+    --color-accent-dark: var(--gray-300);
+    --color-accent-soft: #111111;
+    --color-navy: #000000;
+    --color-on-accent: #000000;
 
-    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.35);
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.25);
-    --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 6px 12px rgba(0, 0, 0, 0.35), 0 20px 40px rgba(0, 0, 0, 0.4);
+    /* Per spec: subtle white-tinted shadows read correctly on a pure black surface. */
+    --shadow-xs: 0 1px 2px rgba(255, 255, 255, 0.05);
+    --shadow-sm: 0 1px 2px rgba(255, 255, 255, 0.04), 0 2px 6px rgba(255, 255, 255, 0.04);
+    --shadow-md: 0 2px 6px rgba(255, 255, 255, 0.05), 0 10px 20px rgba(255, 255, 255, 0.06);
+    --shadow-lg: 0 6px 12px rgba(255, 255, 255, 0.06), 0 20px 40px rgba(255, 255, 255, 0.08);
   }
 }
 
@@ -118,8 +125,10 @@ body {
 
 h1, h2, h3, h4 { line-height: 1.25; }
 
-a { color: var(--color-accent); text-decoration: none; transition: color var(--transition); }
-a:hover { color: var(--color-accent-dark); }
+/* Editorial default: body-copy links read as underlined text, with an opacity
+   shift on hover (there's no second hue left to reach for in a B&W system). */
+a { color: var(--color-ink); text-decoration: underline; text-underline-offset: 2px; opacity: 1; transition: opacity var(--transition); }
+a:hover { opacity: 0.6; }
 
 .site-header-inner, .site-footer-inner, .page-container, .stats-bar-inner {
   max-width: 1120px;
@@ -174,7 +183,7 @@ a:hover { color: var(--color-accent-dark); }
   font-weight: 600;
   transition: color var(--transition);
 }
-.site-nav a:hover { color: var(--color-accent); }
+.site-nav a:hover { color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; }
 
 .mobile-menu-toggle {
   display: none;
@@ -199,10 +208,8 @@ main { min-height: 60vh; padding: 0 0 var(--space-9); }
 .hero {
   padding: var(--space-10) var(--space-3) var(--space-9);
   text-align: center;
-  background:
-    radial-gradient(circle at 18% 20%, rgba(47, 111, 237, 0.18), transparent 45%),
-    radial-gradient(circle at 82% 0%, rgba(47, 111, 237, 0.12), transparent 40%),
-    var(--color-navy);
+  /* Flat black masthead, deliberately — no gradients anywhere in this system. */
+  background: var(--color-navy);
   color: #fff;
 }
 .hero h1 {
@@ -226,8 +233,8 @@ main { min-height: 60vh; padding: 0 0 var(--space-9); }
 }
 
 .hero-actions { margin-top: var(--space-4); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); }
-.hero-secondary-link { color: rgba(255, 255, 255, 0.72); font-size: var(--text-sm); }
-.hero-secondary-link:hover { color: #fff; }
+.hero-secondary-link { color: rgba(255, 255, 255, 0.72); font-size: var(--text-sm); text-decoration: none; opacity: 1; }
+.hero-secondary-link:hover { color: #fff; text-decoration: underline; opacity: 1; }
 
 .hero-teaser {
   background: var(--color-surface);
@@ -359,15 +366,16 @@ main { min-height: 60vh; padding: 0 0 var(--space-9); }
 .site-footer {
   background: var(--color-navy);
   color: rgba(255, 255, 255, 0.65);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   margin-top: var(--space-9);
   padding: var(--space-5) 0;
   font-size: var(--text-sm);
 }
 .site-footer ul { list-style: none; display: flex; flex-wrap: wrap; gap: var(--space-2); padding: 0; margin: 0 0 var(--space-2); }
-.site-footer a { color: rgba(255, 255, 255, 0.75); }
-.site-footer a:hover { color: #fff; }
+.site-footer a { color: rgba(255, 255, 255, 0.75); text-decoration: none; opacity: 1; }
+.site-footer a:hover { color: #fff; text-decoration: underline; opacity: 1; }
 .privacy-choices-link { background: none; border: none; color: rgba(255, 255, 255, 0.75); cursor: pointer; padding: 0; font: inherit; transition: color var(--transition); }
-.privacy-choices-link:hover { color: #fff; }
+.privacy-choices-link:hover { color: #fff; text-decoration: underline; }
 
 .consent-banner {
   position: fixed;
@@ -398,7 +406,16 @@ main { min-height: 60vh; padding: 0 0 var(--space-9); }
 }
 .consent-banner button:hover { background: var(--color-accent-dark); }
 
-input[type="text"], input:not([type]), textarea, select {
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="date"],
+input:not([type]),
+textarea,
+select {
   font: inherit;
   padding: var(--space-1) var(--space-2);
   border: 1px solid var(--color-border);
@@ -412,6 +429,10 @@ input:not([type="checkbox"]):not([type="radio"]), textarea, select {
 }
 
 textarea { width: 100%; resize: vertical; }
+
+/* Browsers default checkbox/radio "check" color to system blue — override so
+   nothing but black/white/gray ever renders, per the design system. */
+input[type="checkbox"], input[type="radio"] { accent-color: var(--color-ink); }
 
 input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-visible, a:focus-visible {
   outline: 2px solid var(--color-accent);
@@ -449,6 +470,8 @@ button:active { transform: translateY(0); }
   padding: var(--space-1) var(--space-2);
   border-radius: var(--radius);
   font-weight: 600;
+  text-decoration: none;
+  opacity: 1;
   box-shadow: var(--shadow-xs);
   transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
 }
@@ -491,8 +514,8 @@ table th, table td { padding: var(--space-1) var(--space-half); border-bottom: 1
 }
 .breadcrumbs ol { list-style: none; display: flex; flex-wrap: wrap; margin: 0; padding: 0; }
 .breadcrumbs li { display: inline-flex; align-items: center; }
-.breadcrumbs a { color: var(--color-muted); }
-.breadcrumbs a:hover { color: var(--color-accent); }
+.breadcrumbs a { color: var(--color-muted); text-decoration: none; opacity: 1; }
+.breadcrumbs a:hover { color: var(--color-accent); text-decoration: underline; opacity: 1; }
 .breadcrumbs span[aria-current="page"] { color: var(--color-ink); font-weight: 600; }
 
 .faq-list { margin-top: var(--space-2); }

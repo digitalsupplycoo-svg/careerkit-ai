@@ -36,7 +36,7 @@ export default function ResumeChecklistPage() {
   return (
     <div className="page-container">
       <JsonLd data={softwareApplicationSchema(TOOL)} />
-      <Breadcrumbs items={[{ name: TOOL.name }]} />
+      <Breadcrumbs items={[{ name: "Free tools", path: "/tools" }, { name: TOOL.name }]} />
       <h1>Resume Checklist Generator</h1>
       <p>
         Answer two quick questions and get a checklist tailored to your experience level. Everything runs in your

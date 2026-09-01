@@ -19,7 +19,7 @@ export default function Image({ params }: { params: { slug: string } }) {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "72px",
-          background: "linear-gradient(135deg, #0f1e3d 0%, #1b3b6f 100%)",
+          background: "#000000",
           fontFamily: "sans-serif"
         }}
       >
@@ -29,7 +29,7 @@ export default function Image({ params }: { params: { slug: string } }) {
             fontWeight: 700,
             letterSpacing: "0.08em",
             textTransform: "uppercase",
-            color: "#7fa4e8",
+            color: "#cccccc",
             display: "flex"
           }}
         >

@@ -20,7 +20,7 @@ export const metadata = buildMetadata({
 export default function JobTrackerPage() {
   return (
     <div className="page-container">
-      <Breadcrumbs items={[{ name: TOOL.name }]} />
+      <Breadcrumbs items={[{ name: "Free tools", path: "/tools" }, { name: TOOL.name }]} />
       <h1>Job Application Tracker</h1>
       <p>
         This tracker stores your entries only in this browser&apos;s local storage. Nothing is sent to a server, and

@@ -6,10 +6,7 @@ import { getFeaturedTool } from "@/lib/tools";
 
 const NAV_LINKS = [
   { href: "/articles", label: "Guides" },
-  { href: "/tools/resume-checklist-generator", label: "Resume Checklist" },
-  { href: "/tools/salary-estimator", label: "Salary Estimator" },
-  { href: "/tools/resume-keyword-matcher", label: "Keyword Matcher" },
-  { href: "/tools/job-tracker", label: "Job Tracker" },
+  { href: "/tools", label: "Tools" },
   { href: "/about", label: "About" }
 ];
 

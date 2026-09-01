@@ -2,7 +2,15 @@
 // structured data, the sitemap, and the homepage tool cards — so tool
 // metadata is defined once.
 
-export type ToolIconName = "checklist" | "salary" | "keyword" | "tracker";
+export type ToolIconName =
+  | "checklist"
+  | "salary"
+  | "keyword"
+  | "tracker"
+  | "letter"
+  | "headline"
+  | "interview"
+  | "offer";
 
 export interface ToolMeta {
   slug: string;
@@ -68,6 +76,50 @@ export const TOOLS: ToolMeta[] = [
     icon: "tracker",
     benefit: "Stop losing track of where you've applied",
     estimatedTime: "1 min to start",
+    featured: false
+  },
+  {
+    slug: "cover-letter",
+    path: "/tools/cover-letter",
+    name: "Cover Letter Generator",
+    shortDescription: "Three distinct, editable cover letter drafts built from the company, role, and skills you enter.",
+    indexable: true,
+    icon: "letter",
+    benefit: "Get past the blank page in under three minutes",
+    estimatedTime: "3 min",
+    featured: false
+  },
+  {
+    slug: "headline-optimizer",
+    path: "/tools/headline-optimizer",
+    name: "LinkedIn Headline Optimizer",
+    shortDescription: "Analyze your current LinkedIn headline and get five rewritten options.",
+    indexable: true,
+    icon: "headline",
+    benefit: "Stop blending in as just a job title",
+    estimatedTime: "2 min",
+    featured: false
+  },
+  {
+    slug: "interview-prep",
+    path: "/tools/interview-prep",
+    name: "Interview Prep Generator",
+    shortDescription: "Ten likely interview questions for your role, each with a framework for structuring your answer.",
+    indexable: true,
+    icon: "interview",
+    benefit: "Walk in with a plan, not just hope",
+    estimatedTime: "4 min",
+    featured: false
+  },
+  {
+    slug: "offer-comparator",
+    path: "/tools/offer-comparator",
+    name: "Job Offer Comparator",
+    shortDescription: "Compare two job offers side by side across pay, flexibility, and growth — with a clear winner.",
+    indexable: true,
+    icon: "offer",
+    benefit: "See past the salary number to the whole picture",
+    estimatedTime: "3 min",
     featured: false
   }
 ];

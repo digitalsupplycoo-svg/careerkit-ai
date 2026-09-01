@@ -35,7 +35,7 @@ export default function SalaryEstimatorPage() {
   return (
     <div className="page-container">
       <JsonLd data={softwareApplicationSchema(TOOL)} />
-      <Breadcrumbs items={[{ name: TOOL.name }]} />
+      <Breadcrumbs items={[{ name: "Free tools", path: "/tools" }, { name: TOOL.name }]} />
       <h1>Salary Range Estimator</h1>
       <p>
         This tool applies a simple, visible formula to a posted or typical salary figure you provide. It is an

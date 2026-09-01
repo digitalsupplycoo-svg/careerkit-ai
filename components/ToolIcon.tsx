@@ -55,6 +55,40 @@ export default function ToolIcon({ name }: ToolIconProps) {
           <path d="M8 13h1M8 16h1M12 13h4M12 16h2.5" />
         </svg>
       );
+    case "letter":
+      return (
+        <svg {...SHARED_PROPS}>
+          <rect x="3" y="5" width="18" height="14" rx="2" />
+          <path d="M3 6.5l9 6.5 9-6.5" />
+        </svg>
+      );
+    case "headline":
+      return (
+        <svg {...SHARED_PROPS}>
+          <rect x="3" y="4" width="18" height="16" rx="2" />
+          <circle cx="8" cy="9.5" r="2" />
+          <path d="M5.5 16c0-2 1.2-3.2 2.5-3.2s2.5 1.2 2.5 3.2" />
+          <path d="M14 8.5h5.5M14 12h5.5M14 15.5h3.5" />
+        </svg>
+      );
+    case "interview":
+      return (
+        <svg {...SHARED_PROPS}>
+          <circle cx="9" cy="8" r="3" />
+          <path d="M4 19c0-3 2-5 5-5s5 2 5 5" />
+          <path d="M15.5 4.5c1.7.4 3 2 3 3.9 0 1.6-.9 3-2.2 3.6" />
+          <path d="M15 19c0-2 .8-3.5 2-4.4" />
+        </svg>
+      );
+    case "offer":
+      return (
+        <svg {...SHARED_PROPS}>
+          <rect x="2.5" y="6" width="8" height="12" rx="1.5" />
+          <rect x="13.5" y="4" width="8" height="14" rx="1.5" />
+          <path d="M4.5 9.5h4M4.5 12.5h4M15.5 7.5h4M15.5 10.5h4M15.5 13.5h2.5" />
+          <path d="M17.5 20.5l-1-1.5 1-1.5 1 1.5-1 1.5z" />
+        </svg>
+      );
     default:
       return null;
   }

@@ -18,12 +18,12 @@ const HOME_FAQS = [
   {
     question: "Is CareerKit AI free to use?",
     answer:
-      "Yes. Every guide and every tool — the Resume Checklist Generator, Salary Range Estimator, Resume Keyword Matcher, and Job Application Tracker — is free, with no account or sign-up required."
+      "Yes. Every guide and every tool — the Resume Checklist Generator, Salary Range Estimator, Resume Keyword Matcher, Cover Letter Generator, LinkedIn Headline Optimizer, Interview Prep Generator, Job Offer Comparator, and Job Application Tracker — is free, with no account or sign-up required. See the full list on the Tools page."
   },
   {
     question: "Do the tools send my resume or personal data to a server?",
     answer:
-      "No. All four tools run their calculations directly in your browser. Nothing you type or upload is transmitted to or stored on a CareerKit AI server."
+      "No. Every tool runs its calculations directly in your browser. Nothing you type or upload is transmitted to or stored on a CareerKit AI server."
   },
   {
     question: "Who writes the guides?",
