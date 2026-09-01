@@ -29,7 +29,12 @@ export function buildMetadata(input: PageMetadataInput): Metadata {
   const ogTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} — Practical Career & Job Search Guides`;
 
   return {
-    title,
+    // Only include `title` at all when explicitly set. Next.js treats an
+    // explicit `title: undefined` key as present, which breaks inheritance
+    // of the root layout's default title/template entirely — omitting the
+    // key lets pages that don't pass a title (currently just the homepage)
+    // correctly fall back to the layout's default title.
+    ...(title ? { title } : {}),
     description,
     alternates: { canonical: path },
     ...(noIndex ? { robots: { index: false, follow: false } } : {}),

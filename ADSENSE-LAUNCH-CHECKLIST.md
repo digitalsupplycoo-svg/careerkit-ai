@@ -1,5 +1,9 @@
 # CareerKit AI — AdSense Pre-Submission Checklist
 
+> **Superseded:** see [`LAUNCH-CHECKLIST.md`](LAUNCH-CHECKLIST.md) for the current, up-to-date
+> checklist (reflects the black-and-white redesign, 8 tools, and 46 articles as of 2026-09-01).
+> This file is kept for history.
+
 This checklist separates what's been technically verified from what still needs your
 judgment. It is not a guarantee of AdSense approval — Google's manual review considers
 things (traffic quality, overall site trust, judgment calls on content value) that no
@@ -14,7 +18,7 @@ a practical signal, not a Google rule, and is labeled as such.
 Confirmed by `npm run build`, `npm run lint`, `npm test`, and `npm run audit:adsense`
 (all passing as of this build):
 
-- [x] `npm run build` completes with zero errors — 41 routes generated, including all 22 article pages.
+- [x] `npm run build` completes with zero errors — 47 routes generated, including all 22 article pages and 8 tools.
 - [x] `npm run lint` passes with zero errors or warnings.
 - [x] `npm test` passes (17 tests: AdSense env-helper logic, article content integrity, keyword-matcher logic).
 - [x] `npm run audit:adsense` passes with 0 errors — only the two expected pre-launch warnings (see below).
