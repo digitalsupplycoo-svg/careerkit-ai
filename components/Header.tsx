@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Logo from "@/components/Logo";
 import { getFeaturedTool } from "@/lib/tools";
 
 const NAV_LINKS = [
@@ -29,8 +30,8 @@ export default function Header() {
   return (
     <header className="site-header" data-scrolled={scrolled}>
       <div className="site-header-inner">
-        <Link href="/" className="site-logo" onClick={() => setOpen(false)}>
-          CareerKit AI
+        <Link href="/" className="site-logo" aria-label="CareerKit AI — home" onClick={() => setOpen(false)}>
+          <Logo />
         </Link>
 
         <div className="site-header-actions">
